@@ -18,7 +18,7 @@ public class Role {
     private Long id;
     private String name;
 
-    @OneToMany(mappedBy = "id")
+    @OneToMany(mappedBy = "id", fetch = FetchType.LAZY)
     private Set<User> users;
 
 }
