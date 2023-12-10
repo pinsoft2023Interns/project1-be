@@ -1,6 +1,7 @@
 package com.pinsoft.project1.be.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -18,7 +19,8 @@ public class Category {
     private Long id;
     private String name;
 
-    @OneToMany(mappedBy="id")
+    @OneToMany(mappedBy="id", fetch = FetchType.LAZY)
+    @JsonIgnore
     private Set<Product> productSet;
 
 }

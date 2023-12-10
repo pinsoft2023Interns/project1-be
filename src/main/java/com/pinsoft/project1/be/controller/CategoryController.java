@@ -9,13 +9,7 @@ import java.util.List;
 
 @RestController
 public class CategoryController {
-
     @Autowired
-    CategoryService kategoriServis;
-
-    public List<Category> list(){
-        return kategoriServis.list();
-    }
-
+    CategoryService categoryService;
 
 }

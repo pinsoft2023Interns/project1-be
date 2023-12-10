@@ -12,15 +12,15 @@ import java.util.Optional;
 @RestController
 public class UserController {
     @Autowired
-    UserService userServis;
+    UserService userService;
     @GetMapping("/user_account")
     public Collection<User> get(){
-        return userServis.getAll();
+        return userService.getAll();
     }
 
     @GetMapping("/user_account/{id}")
     public User get(@PathVariable Long id){
-        Optional<User> optional = userServis.getById(id);
+        Optional<User> optional = userService.getById(id);
         if(optional.isPresent()){
             return optional.get();
         }else{
@@ -29,11 +29,11 @@ public class UserController {
     }
     @DeleteMapping("/user_account/{id}")
     public void delete(@PathVariable Long id){
-        userServis.delete(id);
+        userService.delete(id);
 
     }
     @PostMapping("/user_account")
     public User add(@RequestBody User user){
-        return userServis.add(user);
+        return userService.add(user);
      }
 }

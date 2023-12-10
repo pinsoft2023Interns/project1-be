@@ -12,8 +12,6 @@ import java.util.Optional;
 public class UserService {
     @Autowired
     UserRepository userRepository;
-
-
     public User add(User user) {
         return userRepository.save(user);
     }
@@ -23,7 +21,6 @@ public class UserService {
     public List<User> getAll(){
         return userRepository.findAll();
     }
-
     public Optional<User> getById(Long id){
         return userRepository.findById(id);
     }

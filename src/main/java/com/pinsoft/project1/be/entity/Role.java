@@ -1,5 +1,6 @@
 package com.pinsoft.project1.be.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -19,6 +20,7 @@ public class Role {
     private String name;
 
     @OneToMany(mappedBy = "id", fetch = FetchType.LAZY)
+    @JsonIgnore
     private Set<User> users;
 
 }
