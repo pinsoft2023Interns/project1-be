@@ -1,13 +1,9 @@
 package com.pinsoft.project1.be.entity;
 
-import com.pinsoft.project1.be.controller.UserController;
-import com.pinsoft.project1.be.repository.UserRepository;
-import com.pinsoft.project1.be.servis.UserServis;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 
 @Entity
 @Data

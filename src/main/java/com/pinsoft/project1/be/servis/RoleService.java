@@ -1,4 +1,4 @@
 package com.pinsoft.project1.be.servis;
 
-public class ProductServis {
+public class RoleService {
 }

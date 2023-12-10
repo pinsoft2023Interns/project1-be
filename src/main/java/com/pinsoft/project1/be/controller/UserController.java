@@ -1,22 +1,18 @@
 package com.pinsoft.project1.be.controller;
 
-import com.pinsoft.project1.be.entity.Role;
 import com.pinsoft.project1.be.entity.User;
-import com.pinsoft.project1.be.servis.KategoriServis;
-import com.pinsoft.project1.be.servis.UserServis;
+import com.pinsoft.project1.be.servis.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
-import java.util.*;
+import java.util.Collection;
+import java.util.Optional;
 @RestController
 public class UserController {
     @Autowired
-    UserServis userServis;
-
-
+    UserService userServis;
     @GetMapping("/user_account")
     public Collection<User> get(){
         return userServis.getAll();
