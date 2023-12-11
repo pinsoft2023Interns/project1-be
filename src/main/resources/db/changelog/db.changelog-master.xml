@@ -79,23 +79,27 @@
         <addAutoIncrement tableName="user_account" columnName="id" columnDataType="bigint" startWith="1" incrementBy="1" />
     </changeSet>
 
-    <changeSet id="20231210-insert-category" author="Tuğçe Usta">
+    <changeSet id="20231211-insert-category" author="Tuğçe Usta">
         <insert tableName="category">
             <column name="id" value="1"/>
-            <column name="name" value="mobile-phones"/>
+            <column name="name" value="kitap"/>
         </insert>
         <insert tableName="category">
             <column name="id" value="2"/>
-            <column name="name" value="game-consoles"/>
+            <column name="name" value="elektronik"/>
+        </insert>
+        <insert tableName="category">
+            <column name="id" value="3"/>
+            <column name="name" value="giyim"/>
         </insert>
     </changeSet>
-    <changeSet id="20231210-insert-product" author="Tuğçe Usta">
+    <changeSet id="20231211-insert-product" author="Tuğçe Usta">
         <insert tableName="product">
             <column name="id" value="1"/>
             <column name="category_id" value="1"/>
-            <column name="name" value="samsung-galaxy"/>
+            <column name="name" value="Para Psikolojisi"/>
             <column name="price" value="500"/>
-            <column name="explanation" value="explanation about samsung-galaxy"/>
+            <column name="explanation" value="Morgen Housel, Scala yayıncılık"/>
         </insert>
         <insert tableName="product">
             <column name="id" value="2"/>
@@ -105,7 +109,7 @@
             <column name="explanation" value="explanation about playstation"/>
         </insert>
     </changeSet>
-    <changeSet id="20231210-insert-role" author="Tuğçe Usta">
+    <changeSet id="20231211-insert-role" author="Tuğçe Usta">
         <insert tableName="role">
             <column name="id" value="1"/>
             <column name="name" value="admin"/>
@@ -115,7 +119,7 @@
             <column name="name" value="user"/>
         </insert>
     </changeSet>
-    <changeSet id="20231210-insert-user_account" author="Tuğçe Usta">
+    <changeSet id="20231211-insert-user_account" author="Tuğçe Usta">
         <insert tableName="user_account">
             <column name="id" value="1"/>
             <column name="email" value="abc@abc.com"/>
@@ -124,6 +128,5 @@
             <column name="password" value="admin"/>
         </insert>
     </changeSet>
-
 
 </databaseChangeLog>

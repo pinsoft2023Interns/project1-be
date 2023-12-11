@@ -17,7 +17,6 @@ public class UserController {
     public Collection<User> get(){
         return userService.getAll();
     }
-
     @GetMapping("/user_account/{id}")
     public User get(@PathVariable Long id){
         Optional<User> optional = userService.getById(id);
@@ -30,7 +29,6 @@ public class UserController {
     @DeleteMapping("/user_account/{id}")
     public void delete(@PathVariable Long id){
         userService.delete(id);
-
     }
     @PostMapping("/user_account")
     public User add(@RequestBody User user){
