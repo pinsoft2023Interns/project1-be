@@ -1,0 +1,17 @@
+com\pinsoft\project1\be\servis\ProductService.class
+com\pinsoft\project1\be\Project1BEApplication.class
+com\pinsoft\project1\be\servis\RoleService.class
+com\pinsoft\project1\be\controller\RoleController.class
+com\pinsoft\project1\be\repository\CategoryRepository.class
+com\pinsoft\project1\be\servis\CategoryService.class
+com\pinsoft\project1\be\servis\UserService.class
+com\pinsoft\project1\be\controller\CategoryController.class
+com\pinsoft\project1\be\entity\User.class
+com\pinsoft\project1\be\repository\UserRepository.class
+com\pinsoft\project1\be\entity\Product.class
+com\pinsoft\project1\be\controller\ProductController.class
+com\pinsoft\project1\be\entity\Category.class
+com\pinsoft\project1\be\repository\RoleRepository.class
+com\pinsoft\project1\be\entity\Role.class
+com\pinsoft\project1\be\repository\ProductRepository.class
+com\pinsoft\project1\be\controller\UserController.class
