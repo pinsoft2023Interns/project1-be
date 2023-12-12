@@ -6,8 +6,10 @@ com\pinsoft\project1\be\repository\CategoryRepository.class
 com\pinsoft\project1\be\servis\CategoryService.class
 com\pinsoft\project1\be\servis\UserService.class
 com\pinsoft\project1\be\controller\CategoryController.class
+com\pinsoft\project1\be\config\CorsConfig.class
 com\pinsoft\project1\be\entity\User.class
 com\pinsoft\project1\be\repository\UserRepository.class
+com\pinsoft\project1\be\config\CorsConfig$1.class
 com\pinsoft\project1\be\entity\Product.class
 com\pinsoft\project1\be\controller\ProductController.class
 com\pinsoft\project1\be\entity\Category.class

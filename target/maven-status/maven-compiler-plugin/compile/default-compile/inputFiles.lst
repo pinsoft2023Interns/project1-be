@@ -4,6 +4,7 @@ E:\DEVELOPMENT\pinsoft\project1-be\src\main\java\com\pinsoft\project1\be\servis\
 E:\DEVELOPMENT\pinsoft\project1-be\src\main\java\com\pinsoft\project1\be\repository\ProductRepository.java
 E:\DEVELOPMENT\pinsoft\project1-be\src\main\java\com\pinsoft\project1\be\controller\RoleController.java
 E:\DEVELOPMENT\pinsoft\project1-be\src\main\java\com\pinsoft\project1\be\entity\Category.java
+E:\DEVELOPMENT\pinsoft\project1-be\src\main\java\com\pinsoft\project1\be\config\CorsConfig.java
 E:\DEVELOPMENT\pinsoft\project1-be\src\main\java\com\pinsoft\project1\be\entity\User.java
 E:\DEVELOPMENT\pinsoft\project1-be\src\main\java\com\pinsoft\project1\be\entity\Role.java
 E:\DEVELOPMENT\pinsoft\project1-be\src\main\java\com\pinsoft\project1\be\controller\CategoryController.java
