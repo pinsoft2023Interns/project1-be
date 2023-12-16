@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
+import java.io.IOException;
 import java.util.Collection;
 import java.util.Optional;
 @RestController
@@ -33,7 +34,7 @@ public class ProductController {
     }
 
     @PostMapping("/products")
-    public Product add(@RequestBody Product product){
+    public Product add(@RequestBody Product product) throws IOException {
         return productService.add(product);
     }
 }

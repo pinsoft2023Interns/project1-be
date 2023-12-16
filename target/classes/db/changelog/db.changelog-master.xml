@@ -128,5 +128,12 @@
             <column name="password" value="admin"/>
         </insert>
     </changeSet>
+    <changeSet id="20231214-add-column-product" author="Tuğçe Usta">
+        <addColumn schemaName="public" tableName="product">
+            <column name="base64Image"
+                    type="longblob" >
+            </column>
+        </addColumn>
+    </changeSet>
 
 </databaseChangeLog>
