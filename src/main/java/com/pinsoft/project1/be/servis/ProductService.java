@@ -18,10 +18,6 @@ public class ProductService {
     @Autowired
     ProductRepository productRepository;
     public Product add(Product product) throws IOException {
-        String data = product.getBase64String();
-        byte[] imageBytes = DatatypeConverter.parseBase64Binary(data);
-        BufferedImage img = ImageIO.read(new ByteArrayInputStream(imageBytes));
-
         return productRepository.save(product);
     }
     public void delete(Long id) {

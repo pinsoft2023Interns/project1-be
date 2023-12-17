@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.web.multipart.MultipartFile;
 
 @Entity
 @Data
@@ -17,7 +18,10 @@ public class Product {
     private String name;
     private Float price;
     private String explanation;
-    private String base64String;
+
+    @Lob
+    @Column(name = "base64image", columnDefinition="BLOB")
+    private byte[] base64Image;
 
     @ManyToOne
     @JoinColumn(name = "category_id")
