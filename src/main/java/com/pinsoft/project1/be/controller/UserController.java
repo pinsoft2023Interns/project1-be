@@ -14,6 +14,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 import java.util.Collection;
 import java.util.Optional;
+
 @RestController
 public class UserController {
     @Autowired
@@ -46,6 +47,7 @@ public class UserController {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         }
     }
+    /*
     @DeleteMapping("/user_account/{id}")
     public void delete(@PathVariable Long id){
         userService.delete(id);
@@ -54,4 +56,6 @@ public class UserController {
     public User add(@RequestBody User user){
         return userService.add(user);
      }
+     */
+
 }

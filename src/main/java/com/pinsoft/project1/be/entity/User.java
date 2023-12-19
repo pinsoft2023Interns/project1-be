@@ -29,15 +29,9 @@ public class User implements UserDetails {
     private Role role;
 
     @Override
-    public String getUsername(){
-        return email;
-    }
-    @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return List.of(new SimpleGrantedAuthority(role.getName()));
     }
-
-
 
     @Override
     public boolean isAccountNonExpired() {

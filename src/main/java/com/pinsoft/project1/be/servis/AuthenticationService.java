@@ -3,7 +3,9 @@ package com.pinsoft.project1.be.servis;
 import com.pinsoft.project1.be.dto.AuthenticationRequest;
 import com.pinsoft.project1.be.dto.AuthenticationResponse;
 import com.pinsoft.project1.be.dto.RegisterRequest;
+import com.pinsoft.project1.be.entity.Role;
 import com.pinsoft.project1.be.entity.User;
+import com.pinsoft.project1.be.repository.RoleRepository;
 import com.pinsoft.project1.be.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -14,9 +16,10 @@ import org.springframework.stereotype.Service;
 @Service
 @RequiredArgsConstructor
 public class AuthenticationService {
-    private final PasswordEncoder passwordEncoder;
 
     private final UserRepository userRepository;
+
+    private final RoleRepository roleRepository;
 
     private final JwtService jwtService;
 
@@ -27,6 +30,8 @@ public class AuthenticationService {
         user.setUsername(request.getUsername());
         user.setEmail(request.getEmail());
         user.setPassword(request.getPassword());
+        Role role = roleRepository.findByNameEquals("user").get(0);
+        user.setRole(role);
         User savedUser = userRepository.save(user);
         var jwtToken = jwtService.generateToken(savedUser);
         return AuthenticationResponse.builder()
@@ -36,11 +41,11 @@ public class AuthenticationService {
     public AuthenticationResponse authenticate(AuthenticationRequest request) {
         authManager.authenticate(
                 new UsernamePasswordAuthenticationToken(
-                        request.getEmail(),
+                        request.getUsername(),
                         request.getPassword()
                 )
         );
-        var user =userRepository.findByEmail(request.getEmail())
+        var user =userRepository.findByUsername(request.getUsername())
                 .orElseThrow();
         var jwtToken = jwtService.generateToken(user);
         return AuthenticationResponse.builder()
