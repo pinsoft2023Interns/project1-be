@@ -6,9 +6,11 @@ import com.pinsoft.project1.be.dto.RegisterRequest;
 import com.pinsoft.project1.be.entity.User;
 import com.pinsoft.project1.be.servis.AuthenticationService;
 import com.pinsoft.project1.be.servis.UserService;
+import jakarta.annotation.security.PermitAll;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
@@ -22,6 +24,7 @@ public class UserController {
     @Autowired
     private AuthenticationService authService;
     @PostMapping("/register")
+    @PermitAll
     public ResponseEntity<AuthenticationResponse> register(
             @RequestBody RegisterRequest request
     ){
@@ -29,6 +32,7 @@ public class UserController {
     }
 
     @PostMapping("/authenticate")
+    @PermitAll
     public ResponseEntity<AuthenticationResponse> authenticate(
             @RequestBody AuthenticationRequest request
     ){
@@ -47,15 +51,13 @@ public class UserController {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         }
     }
-    /*
-    @DeleteMapping("/user_account/{id}")
+    /*@DeleteMapping("/user_account/{id}")
     public void delete(@PathVariable Long id){
         userService.delete(id);
     }
     @PostMapping("/user_account")
     public User add(@RequestBody User user){
         return userService.add(user);
-     }
-     */
+     }*/
 
 }
