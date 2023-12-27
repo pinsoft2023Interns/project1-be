@@ -1,6 +1,7 @@
 package com.pinsoft.project1.be.controller;
 
 import com.pinsoft.project1.be.dto.CreateProductRequest;
+import com.pinsoft.project1.be.dto.UpdateProductRequest;
 import com.pinsoft.project1.be.entity.Product;
 import com.pinsoft.project1.be.servis.ProductService;
 import jakarta.annotation.security.PermitAll;
@@ -41,5 +42,10 @@ public class ProductController {
     @PostMapping("/products")
     public Product add(@RequestBody CreateProductRequest productRequest) throws IOException {
         return productService.add(productRequest);
+    }
+
+    @PutMapping("/products")
+    public void update(@RequestBody UpdateProductRequest productRequest) throws IOException {
+        productService.update(productRequest);
     }
 }

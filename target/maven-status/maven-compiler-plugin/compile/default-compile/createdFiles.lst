@@ -12,6 +12,7 @@ com\pinsoft\project1\be\dto\AuthenticationResponse$AuthenticationResponseBuilder
 com\pinsoft\project1\be\repository\UserRepository.class
 com\pinsoft\project1\be\config\CorsConfig$1.class
 com\pinsoft\project1\be\entity\Product.class
+com\pinsoft\project1\be\dto\UpdateProductRequest.class
 com\pinsoft\project1\be\controller\ProductController.class
 com\pinsoft\project1\be\config\JwtAuthenticationFilter.class
 com\pinsoft\project1\be\entity\Category.class

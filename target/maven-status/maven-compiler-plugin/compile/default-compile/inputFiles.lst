@@ -24,4 +24,5 @@ E:\DEVELOPMENT\pinsoft\project1-be\src\main\java\com\pinsoft\project1\be\Project
 E:\DEVELOPMENT\pinsoft\project1-be\src\main\java\com\pinsoft\project1\be\servis\CategoryService.java
 E:\DEVELOPMENT\pinsoft\project1-be\src\main\java\com\pinsoft\project1\be\dto\CreateProductRequest.java
 E:\DEVELOPMENT\pinsoft\project1-be\src\main\java\com\pinsoft\project1\be\config\JwtAuthenticationFilter.java
+E:\DEVELOPMENT\pinsoft\project1-be\src\main\java\com\pinsoft\project1\be\dto\UpdateProductRequest.java
 E:\DEVELOPMENT\pinsoft\project1-be\src\main\java\com\pinsoft\project1\be\repository\RoleRepository.java
