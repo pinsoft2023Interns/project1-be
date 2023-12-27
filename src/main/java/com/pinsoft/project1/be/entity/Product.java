@@ -18,11 +18,7 @@ public class Product {
     private String name;
     private Float price;
     private String explanation;
-
-    @Lob
-    @Column(name = "base64image", columnDefinition="BLOB")
     private byte[] base64Image;
-
     @ManyToOne
     @JoinColumn(name = "category_id")
     private Category category;

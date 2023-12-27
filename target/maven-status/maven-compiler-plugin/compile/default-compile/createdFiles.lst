@@ -25,6 +25,7 @@ com\pinsoft\project1\be\dto\AuthenticationRequest$AuthenticationRequestBuilder.c
 com\pinsoft\project1\be\controller\CategoryController.class
 com\pinsoft\project1\be\config\CorsConfig.class
 com\pinsoft\project1\be\entity\User.class
+com\pinsoft\project1\be\dto\CreateProductRequest.class
 com\pinsoft\project1\be\repository\RoleRepository.class
 com\pinsoft\project1\be\dto\AuthenticationRequest.class
 com\pinsoft\project1\be\dto\RegisterRequest$RegisterRequestBuilder.class

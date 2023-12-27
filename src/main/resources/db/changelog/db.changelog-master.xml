@@ -14,7 +14,7 @@
                 <constraints unique="true" uniqueConstraintName="name_unq" />
             </column>
         </createTable>
-        <addAutoIncrement tableName="category" columnName="id" columnDataType="bigint" startWith="1" incrementBy="1" />
+        <addAutoIncrement tableName="category" columnName="id" columnDataType="bigint" startWith="100" incrementBy="1" />
     </changeSet>
 
     <changeSet id="20231210-create-product" author="Tuğçe Usta">
@@ -40,7 +40,7 @@
                                   referencedColumnNames="id"
                                   referencedTableName="category"
         />
-        <addAutoIncrement tableName="product" columnName="id" columnDataType="bigint" startWith="1" incrementBy="1" />
+        <addAutoIncrement tableName="product" columnName="id" columnDataType="bigint" startWith="100" incrementBy="1" />
     </changeSet>
 
     <changeSet id="20231210-create-role" author="Tuğçe Usta">
@@ -52,7 +52,7 @@
                 <constraints unique="true" />
             </column>
         </createTable>
-        <addAutoIncrement tableName="role" columnName="id" columnDataType="bigint" startWith="1" incrementBy="1" />
+        <addAutoIncrement tableName="role" columnName="id" columnDataType="bigint" startWith="100" incrementBy="1" />
     </changeSet>
 
     <changeSet id="20231210-create-user_account" author="Tuğçe Usta">
@@ -76,7 +76,7 @@
                                   referencedColumnNames="id"
                                   referencedTableName="role"
         />
-        <addAutoIncrement tableName="user_account" columnName="id" columnDataType="bigint" startWith="1" incrementBy="1" />
+        <addAutoIncrement tableName="user_account" columnName="id" columnDataType="bigint" startWith="100" incrementBy="1" />
     </changeSet>
 
     <changeSet id="20231211-insert-category" author="Tuğçe Usta">
