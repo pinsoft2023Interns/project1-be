@@ -78,6 +78,28 @@
         />
         <addAutoIncrement tableName="user_account" columnName="id" columnDataType="bigint" startWith="100" incrementBy="1" />
     </changeSet>
+    
+    <changeSet id="20231229-create-order_table" author="Tuğçe Usta">
+        <createTable schemaName="public" tableName="order_table">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" primaryKeyName="pk_order_table_id"/>
+            </column>
+            <column name="user_account_id" type="bigint">
+            </column>
+            <column name="name" type="varchar(250)">
+            </column>
+            <column name="price" type="float">
+            </column>
+            <column name="quantity" type="int">
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="user_account_id"
+                                 constraintName="fk_order_table_user_account"
+                                 baseTableName="order_table"
+                                 referencedColumnNames="id"
+                                 referencedTableName="user_account" />
+        <addAutoIncrement tableName="order_table" columnName="id" columnDataType="bigint" startWith="0001" incrementBy="1" />
+    </changeSet>
 
     <changeSet id="20231211-insert-category" author="Tuğçe Usta">
         <insert tableName="category">

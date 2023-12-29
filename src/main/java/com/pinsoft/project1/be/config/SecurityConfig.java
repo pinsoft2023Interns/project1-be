@@ -3,6 +3,7 @@ package com.pinsoft.project1.be.config;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -25,8 +26,11 @@ public class SecurityConfig {
                 .csrf()
                 .disable()
                 .authorizeRequests()
-                .requestMatchers("/swagger-ui/**","/v3/api-docs/**","/register","/authenticate", "/product-controller/**")
+                .requestMatchers("/swagger-ui/**","/v3/api-docs/**","/register","/authenticate","/orders")
                 .permitAll()
+                .requestMatchers(HttpMethod.DELETE).hasAuthority("admin")
+                .requestMatchers(HttpMethod.POST).hasAuthority("admin")
+                .requestMatchers(HttpMethod.PUT).hasAuthority("admin")
                 .anyRequest()
                 .authenticated()
                 .and()

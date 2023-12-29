@@ -1,5 +1,6 @@
 package com.pinsoft.project1.be.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,6 +11,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Data
@@ -23,6 +25,11 @@ public class User implements UserDetails {
     private String email;
     private String username;
     private String password;
+
+    @OneToMany(mappedBy = "id")
+    @JsonIgnore
+    private Set <Order> orders;
+
 
     @ManyToOne
     @JoinColumn(name = "role_id",referencedColumnName = "id")

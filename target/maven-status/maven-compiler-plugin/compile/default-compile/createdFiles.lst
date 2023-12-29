@@ -1,11 +1,13 @@
 com\pinsoft\project1\be\servis\ProductService.class
 com\pinsoft\project1\be\Project1BEApplication.class
+com\pinsoft\project1\be\repository\OrderRepository.class
 com\pinsoft\project1\be\servis\RoleService.class
 com\pinsoft\project1\be\controller\RoleController.class
 com\pinsoft\project1\be\repository\CategoryRepository.class
 com\pinsoft\project1\be\servis\CategoryService.class
 com\pinsoft\project1\be\servis\JwtService.class
 com\pinsoft\project1\be\servis\UserService.class
+com\pinsoft\project1\be\dto\CreateOrderRequest.class
 com\pinsoft\project1\be\config\ApplicationConfig.class
 com\pinsoft\project1\be\config\SecurityConfig.class
 com\pinsoft\project1\be\dto\AuthenticationResponse$AuthenticationResponseBuilder.class
@@ -15,6 +17,7 @@ com\pinsoft\project1\be\entity\Product.class
 com\pinsoft\project1\be\dto\UpdateProductRequest.class
 com\pinsoft\project1\be\controller\ProductController.class
 com\pinsoft\project1\be\config\JwtAuthenticationFilter.class
+com\pinsoft\project1\be\controller\OrderController.class
 com\pinsoft\project1\be\entity\Category.class
 com\pinsoft\project1\be\entity\Role.class
 com\pinsoft\project1\be\dto\AuthenticationResponse.class
@@ -26,6 +29,8 @@ com\pinsoft\project1\be\dto\AuthenticationRequest$AuthenticationRequestBuilder.c
 com\pinsoft\project1\be\controller\CategoryController.class
 com\pinsoft\project1\be\config\CorsConfig.class
 com\pinsoft\project1\be\entity\User.class
+com\pinsoft\project1\be\servis\OrderService.class
+com\pinsoft\project1\be\entity\Order.class
 com\pinsoft\project1\be\dto\CreateProductRequest.class
 com\pinsoft\project1\be\repository\RoleRepository.class
 com\pinsoft\project1\be\dto\AuthenticationRequest.class
