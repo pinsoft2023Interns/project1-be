@@ -29,7 +29,7 @@ public class SecurityConfig {
                 .requestMatchers("/swagger-ui/**","/v3/api-docs/**","/register","/authenticate","/orders")
                 .permitAll()
                 .requestMatchers(HttpMethod.DELETE).hasAuthority("admin")
-                .requestMatchers(HttpMethod.POST).hasAuthority("admin")
+                //.requestMatchers(HttpMethod.POST).hasAuthority("admin")
                 .requestMatchers(HttpMethod.PUT).hasAuthority("admin")
                 .anyRequest()
                 .authenticated()
