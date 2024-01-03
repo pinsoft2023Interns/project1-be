@@ -7,6 +7,7 @@ import com.pinsoft.project1.be.repository.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -27,8 +28,13 @@ public class OrderService {
         return orderRepository.save(order);
     }
 
-    public Optional<Order> getById(Long id) {return orderRepository.findById(id);}
+    public List<Order> getByUserId(Long userId) {
+        User user = userService.getById(userId).get();
+        return orderRepository.findAllByUser(user);
+    }
     public void delete(Long id) {orderRepository.deleteById(id);}
+
+
 
 
 
