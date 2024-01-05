@@ -13,7 +13,7 @@ public class CorsConfig {
             public void addCorsMappings(CorsRegistry registry) {
                 registry.
                         addMapping("/**")
-                        .allowedOrigins("http://localhost:3000","http://localhost:8080","https://pinsoft.onrender.com")
+                        .allowedOrigins("http://localhost:3000","http://localhost:8080","https://pinsoft.onrender.com","https://pinsoft-shopping-challange-next.vercel.app")
                         .allowedMethods("GET", "POST", "PUT", "DELETE")
                         .allowedHeaders("*");
             }

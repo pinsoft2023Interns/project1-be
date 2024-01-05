@@ -9,10 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
-import javax.imageio.ImageIO;
-import javax.xml.bind.DatatypeConverter;
-import java.awt.image.BufferedImage;
-import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.util.Base64;
 import java.util.List;
@@ -26,12 +22,21 @@ public class ProductService {
     @Autowired
     CategoryService categoryService;
 
-    public Product add(CreateProductRequest productRequest) {
+
+
+    public Product add(CreateProductRequest productRequest) throws IOException{
         Product product = new Product();
+        String fileName = StringUtils.cleanPath(productRequest.getBase64Image().getOriginalFilename());
+        try{
+            product.setBase64image(Base64.getEncoder().encodeToString(productRequest.getBase64Image().getBytes()));
+        }catch (IOException e){
+            e.printStackTrace();
+        }
         product.setExplanation(productRequest.getExplanation());
         product.setPrice(productRequest.getPrice());
         product.setName(productRequest.getName());
         Category category = categoryService.getById(productRequest.getCategoryId()).get();
+
         product.setCategory(category);
 
         return productRepository.save(product);

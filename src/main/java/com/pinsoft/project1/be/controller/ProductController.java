@@ -40,12 +40,13 @@ public class ProductController {
     }
 
     @PostMapping("/products")
-    public Product add(@RequestBody CreateProductRequest productRequest) throws IOException {
+    public Product add(@ModelAttribute CreateProductRequest productRequest) throws IOException {
+        System.out.println(productRequest);
         return productService.add(productRequest);
     }
 
     @PutMapping("/products")
-    public void update(@RequestBody UpdateProductRequest productRequest) throws IOException {
+    public void update(@RequestBody UpdateProductRequest productRequest) {
         productService.update(productRequest);
     }
 }
