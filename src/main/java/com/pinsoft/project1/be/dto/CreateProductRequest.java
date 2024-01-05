@@ -11,7 +11,7 @@ import java.io.Serializable;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CreateProductRequest implements Serializable {
+public class CreateProductRequest {
     private String name;
     private Float price;
     private String explanation;

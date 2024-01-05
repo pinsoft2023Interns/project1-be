@@ -39,7 +39,7 @@ public class ProductController {
     }
 
     @PostMapping("/products")
-    public Product add(@ModelAttribute CreateProductRequest productRequest) throws IOException {
+    public Product add(@RequestBody CreateProductRequest productRequest) throws IOException {
         return productService.add(productRequest);
     }
 
