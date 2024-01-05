@@ -16,6 +16,5 @@ public class CreateProductRequest implements Serializable {
     private Float price;
     private String explanation;
     private Long categoryId;
-    private MultipartFile base64Image;
-
+    private String base64Image;
 }

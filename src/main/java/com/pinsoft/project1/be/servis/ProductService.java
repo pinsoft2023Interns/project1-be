@@ -22,23 +22,14 @@ public class ProductService {
     @Autowired
     CategoryService categoryService;
 
-
-
     public Product add(CreateProductRequest productRequest) throws IOException{
         Product product = new Product();
-        String fileName = StringUtils.cleanPath(productRequest.getBase64Image().getOriginalFilename());
-        try{
-            product.setBase64image(Base64.getEncoder().encodeToString(productRequest.getBase64Image().getBytes()));
-        }catch (IOException e){
-            e.printStackTrace();
-        }
         product.setExplanation(productRequest.getExplanation());
         product.setPrice(productRequest.getPrice());
         product.setName(productRequest.getName());
+        product.setBase64image(productRequest.getBase64Image());
         Category category = categoryService.getById(productRequest.getCategoryId()).get();
-
         product.setCategory(category);
-
         return productRepository.save(product);
     }
     public void delete(Long id) {

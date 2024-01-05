@@ -18,7 +18,6 @@ import java.util.Optional;
 public class ProductController {
     @Autowired
     ProductService productService;
-
     @GetMapping("/products")
     @PermitAll
     public Collection<Product> get(){
@@ -41,7 +40,6 @@ public class ProductController {
 
     @PostMapping("/products")
     public Product add(@ModelAttribute CreateProductRequest productRequest) throws IOException {
-        System.out.println(productRequest);
         return productService.add(productRequest);
     }
 
