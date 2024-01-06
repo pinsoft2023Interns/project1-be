@@ -8,6 +8,7 @@ com\pinsoft\project1\be\servis\CategoryService.class
 com\pinsoft\project1\be\servis\JwtService.class
 com\pinsoft\project1\be\servis\UserService.class
 com\pinsoft\project1\be\dto\CreateOrderRequest.class
+com\pinsoft\project1\be\exception\ApiException.class
 com\pinsoft\project1\be\config\ApplicationConfig.class
 com\pinsoft\project1\be\config\SecurityConfig.class
 com\pinsoft\project1\be\dto\AuthenticationResponse$AuthenticationResponseBuilder.class
@@ -29,8 +30,10 @@ com\pinsoft\project1\be\dto\AuthenticationRequest$AuthenticationRequestBuilder.c
 com\pinsoft\project1\be\controller\CategoryController.class
 com\pinsoft\project1\be\config\CorsConfig.class
 com\pinsoft\project1\be\entity\User.class
+com\pinsoft\project1\be\exception\ApiExceptionHandler.class
 com\pinsoft\project1\be\servis\OrderService.class
 com\pinsoft\project1\be\entity\Order.class
+com\pinsoft\project1\be\exception\ApiRequestException.class
 com\pinsoft\project1\be\dto\CreateProductRequest.class
 com\pinsoft\project1\be\repository\RoleRepository.class
 com\pinsoft\project1\be\dto\AuthenticationRequest.class

@@ -46,9 +46,13 @@ public class ProductService {
         Optional<Product> productOptional=productRepository.findById(productRequest.getId());
         if(productOptional.isPresent()){
             Product product = new Product();
+            product.setId(productRequest.getId());
             product.setName(productRequest.getName());
             product.setPrice(productRequest.getPrice());
             product.setExplanation(productRequest.getExplanation());
+            product.setBase64image(productRequest.getBase64Image());
+            Category category = categoryService.getById(productRequest.getCategoryId()).get();
+            product.setCategory(category);
             productRepository.save(product);
         }
     }

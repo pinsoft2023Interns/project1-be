@@ -13,4 +13,5 @@ public class UpdateProductRequest {
     private Float price;
     private String explanation;
     private Long categoryId;
+    private String base64Image;
 }

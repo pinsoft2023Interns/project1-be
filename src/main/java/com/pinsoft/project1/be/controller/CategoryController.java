@@ -2,6 +2,7 @@ package com.pinsoft.project1.be.controller;
 
 import com.pinsoft.project1.be.entity.Category;
 import com.pinsoft.project1.be.entity.Role;
+import com.pinsoft.project1.be.exception.ApiRequestException;
 import com.pinsoft.project1.be.servis.CategoryService;
 import jakarta.annotation.security.PermitAll;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,9 +32,8 @@ public class CategoryController {
         }
     }
     @DeleteMapping("/category/{id}")
-    public void delete(@PathVariable Long id){
-        categoryService.delete(id);
-    }
+
+    public void delete(@PathVariable Long id){categoryService.delete(id);}
     @PostMapping("/category")
     public Category add(@RequestBody Category category){
         return categoryService.add(category);
